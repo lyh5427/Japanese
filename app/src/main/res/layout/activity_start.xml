@@ -1,111 +1,120 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".start">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <data>
+        <variable name="Startvm" type="com.example.japanese.start.StartViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.123"
-        tools:layout_editor_absoluteX="0dp">
+        android:layout_height="match_parent"
+        tools:context=".start.start">
 
-        <TextView
-            android:id="@+id/nanT"
-            android:layout_width="150dp"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.123"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/nanT"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:text="난이도 설정" />
+
+            <Button
+                android:id="@+id/nanB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@{Startvm.rank}" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.142"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/ofT"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="잠금화면 ON/OFF"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/ofB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@{Startvm.status}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+            app:layout_constraintVertical_bias="0.179"
+            tools:layout_editor_absoluteX="0dp">
+
+            <TextView
+                android:id="@+id/countT"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="갯수 설정"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/countB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="@{Startvm.count}" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="난이도 설정" />
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            app:layout_constraintVertical_bias="0.218"
+            tools:layout_editor_absoluteX="0dp">
 
-        <Button
-            android:id="@+id/nanB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="클릭" />
+            <Button
+                android:id="@+id/btn_set"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="설정완료" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.142"
-        tools:layout_editor_absoluteX="0dp">
-
-        <TextView
-            android:id="@+id/ofT"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="잠금화면 ON/OFF"
-            android:gravity="center"/>
-
-        <Button
-            android:id="@+id/ofB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="OFF" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.179"
-        tools:layout_editor_absoluteX="0dp">
-
-        <TextView
-            android:id="@+id/countT"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="갯수 설정"
-            android:gravity="center"/>
-
-        <Button
-            android:id="@+id/countB"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_weight="1"
-            android:text="클릭" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout8"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.218"
-        tools:layout_editor_absoluteX="0dp">
-
-        <Button
-            android:id="@+id/btn_set"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="설정완료" />
-    </LinearLayout>
+</layout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>

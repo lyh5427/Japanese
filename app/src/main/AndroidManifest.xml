@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Japanese">
-        <activity android:name=".start"></activity>
+        <activity android:name=".start.start"></activity>
         <activity
-            android:name=".ScreenLockActivity"
+            android:name=".screenLock.ScreenLockActivity"
             android:taskAffinity="com.bluewhale.lockscreentest.lockscreen"></activity>
 
         <receiver android:name=".LockScreenReceiver"
@@ -25,7 +25,7 @@
         </receiver>
 
         <service
-            android:name=".ScreenService"
+            android:name=".screenLock.ScreenService"
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.SYSTEM_ALERT_WINDOW" />
