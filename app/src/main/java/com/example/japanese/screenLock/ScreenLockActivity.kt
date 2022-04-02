@@ -47,7 +47,7 @@ class ScreenLockActivity : AppCompatActivity() {
         lBinding.LNext.setOnClickListener{
             lBinding.means.visibility = View.INVISIBLE
             l_count ++
-            model.selects()
+            model.next()
             if(l_count > Integer.parseInt(model.count.value!!)){
                 finish()
             }
