@@ -46,7 +46,7 @@ class start : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
+        testFunction()
         Sbinding = DataBindingUtil.setContentView(this, R.layout.activity_start)
         Sbinding.lifecycleOwner = this
         Sbinding.startvm = model
@@ -106,5 +106,7 @@ class start : AppCompatActivity() {
         }
     }
 
-
+    fun testFunction(){
+        println("A")
+    }
 }
