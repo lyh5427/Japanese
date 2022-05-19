@@ -113,4 +113,8 @@ class start : AppCompatActivity() {
     fun action(){
         println("S")
     }
+
+    fun s(){
+        
+    }
 }
