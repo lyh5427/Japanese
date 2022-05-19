@@ -105,19 +105,4 @@ class start : AppCompatActivity() {
             }
         }
     }
-
-    fun testFunction(){
-        println("A")
-    }
-
-    fun action(){
-        println("S")
-    }
-
-    fun s(){
-        
-    }
-    //s
-
-    //ssss
 }
