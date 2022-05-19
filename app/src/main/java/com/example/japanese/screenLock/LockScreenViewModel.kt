@@ -1,5 +1,6 @@
 package com.example.japanese.screenLock
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.japanese.firebase.Fbrepository
@@ -18,6 +19,10 @@ class LockScreenViewModel() : ViewModel() {
 
     fun next(){
         repository.selects()
+    }
+
+    fun print(){
+        Log.d("aa", " aaaaaaaaaaaa")
     }
 
 }
